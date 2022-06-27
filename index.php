@@ -23,9 +23,9 @@
     <ul>
         <?php foreach($movies as $movie){ ?>
             <li>
-                <h4><?php echo $movie->title; ?></h4>
-                <h4><?php echo $movie->director; ?></h4>
-                <h4><?php echo $movie->year; ?></h4>
+                <h4>Titolo:<?php echo $movie->title; ?></h4>
+                <h4>Regista:<?php echo $movie->director; ?></h4>
+                <h4>Anno:<?php echo $movie->year; ?></h4>
                 <h4><?php echo $movie->oscar; ?></h4>
             </li>
 
