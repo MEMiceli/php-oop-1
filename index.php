@@ -1,3 +1,15 @@
+<?php
+    require_once __DIR__ .'/classes/movie.php';
+
+    $movies = [
+        new Movie('Top Gun','Tony Scott','1986','true'),
+        new Movie('The Godfather','Francis Ford Coppola','1972','true'),
+        new Movie('Gold','Anthony Hayes','2022','false'),
+        new Movie('Altrimenti ci Arrabbiamo','Marcello Fondato','1974','false'),
+
+
+    ];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +19,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Collezione di Marcello</h1>
+    <ul>
+        <?php foreach($movies as $movie){ ?>
+            <li>
+                <h4><?php echo $movie->title; ?></h4>
+                <h4><?php echo $movie->director; ?></h4>
+                <h4><?php echo $movie->year; ?></h4>
+                <h4><?php echo $movie->oscar; ?></h4>
+            </li>
+
+        <?php } ?>
+    </ul>
     
 </body>
 </html>
