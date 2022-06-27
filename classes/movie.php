@@ -6,7 +6,7 @@ class Movie {
     public $nation;
     public $year;
 
-    public $oscar = false;
+    // public $oscar = false;
 
     public function __construct($_title, $_director, $_year, $_oscar)
     {
@@ -15,9 +15,9 @@ class Movie {
         $this->year = $_year;
         $this->oscar = $_oscar;
 
-        if($this->oscar == true)
-            $this->oscar = 'Best Film';
-            else
-                $this->oscar = 'No Oscar';
+        // if($this->oscar == true)
+        //     $this->oscar = 'Best Film';
+        //     else
+        //         $this->oscar = 'No Oscar';
     }
 }

@@ -4,8 +4,8 @@
     $movies = [
         new Movie('Top Gun','Tony Scott','1986','true'),
         new Movie('The Godfather','Francis Ford Coppola','1972','true'),
-        new Movie('Gold','Anthony Hayes','2022','false'),
-        new Movie('Altrimenti ci Arrabbiamo','Marcello Fondato','1974','false'),
+        new Movie('Gold','Anthony Hayes','2022',''),
+        new Movie('Altrimenti ci Arrabbiamo','Marcello Fondato','1974',''),
 
 
     ];
@@ -26,7 +26,9 @@
                 <h4>Titolo:<?php echo $movie->title; ?></h4>
                 <h4>Regista:<?php echo $movie->director; ?></h4>
                 <h4>Anno:<?php echo $movie->year; ?></h4>
-                <h4><?php echo $movie->oscar; ?></h4>
+                <?php if($movie->oscar == true){ ?>
+                    <?php echo "Best Film"?>
+                <?php } ?>
             </li>
 
         <?php } ?>
